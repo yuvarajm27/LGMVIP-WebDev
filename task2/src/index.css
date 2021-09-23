@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Gluten', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./bg.svg');
+  background-color: #214478;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
