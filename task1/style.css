@@ -1,0 +1,243 @@
+:root {
+  font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 8px;
+  }
+}
+html {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+}
+nav {
+  display: flex;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  box-shadow: 0 0 5px grey;
+  background-color: rgba(255, 255, 255, 0.945);
+  z-index: 1;
+}
+nav .title {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  margin: 0;
+  line-height: 2.5rem;
+  color: rgb(29, 29, 29);
+}
+nav .logo {
+  height: 4.5rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+}
+nav .lnk {
+  margin: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: rgb(65, 65, 65);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 0.5rem;
+}
+nav .lnk.push {
+  margin-left: auto;
+}
+
+nav .lnk:hover {
+  box-shadow: 0 0 5px grey;
+  background-color: rgba(231, 231, 231, 0.568);
+}
+
+.content {
+  margin: 0px;
+  margin-top: 5.5rem;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  background-image: url(img/splash-unsplash.jpg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 100%;
+  height: 50rem;
+  background-color: #f6f6f6;
+  position: relative;
+}
+@media screen and (max-width: 70rem) {
+  .intro {
+    background-size: cover;
+    background-position: center;
+  }
+}
+.intro > div {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem;
+  margin: 1rem;
+  margin-right: 5rem;
+  color: rgb(59, 59, 59);
+  animation: intro-slide 1s ease;
+  background-color: #f6f6f6a2;
+}
+@keyframes intro-slide {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+}
+.title {
+  margin: 1rem;
+  font-size: 3rem;
+}
+.subtitle {
+  font-size: 1.7rem;
+  margin: 1rem;
+}
+.text {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+#about_us {
+  scroll-margin-top: 5.5rem;
+  margin: 0;
+  height: 50rem;
+  position: relative;
+  background-image: url(img/about-us-unsplash.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #43c2e9;
+}
+#about_us > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  width: 80%;
+  margin: auto;
+  background-color: rgba(32, 32, 32, 0.349);
+  color: white;
+  max-width: 70rem;
+}
+#products {
+  scroll-margin-top: 5.5rem;
+  margin: 0;
+  min-height: 50rem;
+  background-color: #b1e693;
+  color: #383838;
+}
+#products .title {
+  margin: 2rem;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+#products .products_list {
+  min-height: 38rem;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+@media screen and (max-width: 1100px) {
+  #products .products_list {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #products .products_list {
+    grid-template-columns: auto;
+  }
+}
+#products .products_list > div .image img {
+  width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#products .products_list > div .image {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 25%;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  background-color: rgb(194, 194, 194);
+}
+#products .products_list > div .cover {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 25%;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  background-color: rgba(241, 241, 241, 0.37);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#products .products_list > div .cover:hover {
+  opacity: 1;
+}
+#products .products_list > div .cover button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#products .products_list > div .title {
+  padding: 0;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+#products .products_list > div {
+  padding: 2rem;
+}
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #224eec;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 5px grey;
+  transition: padding 0.3s ease;
+}
+button:hover {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+button:active {
+  padding: 1.1rem;
+  font-size: 1.1rem;
+}
+footer {
+  min-height: 15rem;
+  padding: 1.3rem;
+  text-align: center;
+}
+footer .title {
+  font-size: 2rem;
+}
