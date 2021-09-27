@@ -19,7 +19,7 @@ const loadingHTML = (
         top: '50%',
         left: '50%',
         position: 'absolute',
-        transform: 'translate(50%, 50%)',
+        transform: 'translate(-50%, -50%)',
         border: '3px solid #fb5b53',
         borderTop: '3px solid transparent',
         borderRadius: '50%',
